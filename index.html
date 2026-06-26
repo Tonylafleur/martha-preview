@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Residence Martha — Apercu refonte</title>
+  <style>
+    :root{--cream:#FDFBF7;--green:#1B3B2B;--gold:#D4AF37;--text:#1f2933;--muted:#6b7280;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--cream);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(253,251,247,.94);border-bottom:1px solid rgba(27,59,43,.1);position:sticky;top:0;z-index:10}
+    .brand{font-weight:800;color:var(--green);font-size:20px}
+    .btn{background:var(--green);color:white;padding:13px 20px;border-radius:999px;display:inline-block;font-weight:700;text-decoration:none}
+    .hero{padding:70px 6%;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;max-width:1200px;margin:auto}
+    h1,h2,h3{font-family:Georgia,serif;color:var(--green);line-height:1.12}
+    h1{font-size:clamp(38px,5vw,68px);margin:0 0 18px}
+    .lead{font-size:19px;color:#42564b;max-width:620px;margin-bottom:28px}
+    .visual{min-height:420px;border-radius:28px;background:linear-gradient(180deg,rgba(27,59,43,.05),rgba(27,59,43,.45)),radial-gradient(circle at 25% 20%,rgba(212,175,55,.55),transparent 30%),linear-gradient(135deg,#f7ead2,#ffffff 45%,#d9e4da);box-shadow:0 20px 60px rgba(27,59,43,.12);display:flex;align-items:flex-end;padding:24px;color:white;font-weight:800}
+    .search{max-width:1100px;margin:-35px auto 50px;background:white;border-radius:22px;padding:18px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;box-shadow:0 20px 60px rgba(27,59,43,.12);position:relative;z-index:2}
+    .field{border:1px solid rgba(27,59,43,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .field small{display:block;color:var(--muted);font-size:12px}
+    .field strong{color:var(--green)}
+    section{padding:55px 6%;max-width:1200px;margin:auto}
+    .cards,.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card,.pillar{background:var(--card);border-radius:16px;box-shadow:0 14px 34px rgba(27,59,43,.08);border:1px solid rgba(27,59,43,.06)}
+    .pillar{padding:24px}
+    .card{overflow:hidden}
+    .img{height:210px;background:linear-gradient(135deg,rgba(27,59,43,.08),rgba(212,175,55,.24)),linear-gradient(120deg,#fff,#dfe8df);display:grid;place-items:center;color:var(--green);font-weight:800}
+    .content{padding:22px}
+    .price{font-size:20px;color:var(--green);font-weight:900}
+    footer{text-align:center;padding:42px 6%;background:var(--green);color:white;margin-top:40px}
+    @media(max-width:850px){header{padding:18px}.hero{grid-template-columns:1fr;padding:42px 18px}.visual{min-height:280px}.search{grid-template-columns:1fr;margin:0 18px 30px}section{padding:38px 18px}.cards,.pillars{grid-template-columns:1fr}.btn{width:100%;text-align:center}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Residence Martha</div>
+    <a class="btn" href="#reservation">Reserver</a>
+  </header>
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Le standing d’un hotel, l’intimite d’un chez-soi a Yaounde.</h1>
+        <p class="lead">Appartements meubles modernes, securises et entierement equipes pour vos sejours professionnels, familiaux ou de passage.</p>
+        <a class="btn" href="#reservation">Verifier la disponibilite</a>
+      </div>
+      <div class="visual">Apercu visuel premium / photos de la residence</div>
+    </div>
+    <div class="search" id="reservation">
+      <div class="field"><small>Date d’arrivee</small><strong>Choisir une date</strong></div>
+      <div class="field"><small>Date de depart</small><strong>Choisir une date</strong></div>
+      <div class="field"><small>Type d’hebergement</small><strong>Studio, 1 chambre, 2 chambres</strong></div>
+      <a class="btn" href="#">Verifier</a>
+    </div>
+    <section>
+      <h2>Les piliers d’excellence</h2>
+      <div class="pillars">
+        <div class="pillar"><h3>Emplacement strategique</h3><p>Borne 15 Mvan, acces rapide aux grands axes et a l’aeroport de Nsimalen.</p></div>
+        <div class="pillar"><h3>Securite maximale</h3><p>Gardiennage 24h/7j, videosurveillance et environnement rassurant.</p></div>
+        <div class="pillar"><h3>Equipements modernes</h3><p>WiFi haut debit, Smart TV, Netflix, climatisation et cuisine equipee.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>La collection d’appartements</h2>
+      <div class="cards">
+        <article class="card"><div class="img">Studio Premium</div><div class="content"><h3>Studio Premium</h3><p>Ideal pour un court sejour professionnel ou de passage.</p><p class="price">A partir de 25 000 FCFA / nuit</p><a class="btn" href="#">Decouvrir</a></div></article>
+        <article class="card"><div class="img">Appartement 1 chambre</div><div class="content"><h3>Appartement 1 chambre</h3><p>Confort, intimite et espace pour un sejour prolonge.</p><p class="price">A partir de 35 000 FCFA / nuit</p><a class="btn" href="#">Decouvrir</a></div></article>
+        <article class="card"><div class="img">Appartement 2 chambres</div><div class="content"><h3>Appartement 2 chambres</h3><p>Parfait pour familles, collegues ou invites longue duree.</p><p class="price">A partir de 50 000 FCFA / nuit</p><a class="btn" href="#">Decouvrir</a></div></article>
+      </div>
+    </section>
+  </main>
+  <footer>Residence Martha — Apercu de refonte numerique pour validation client.</footer>
+</body>
+</html>
